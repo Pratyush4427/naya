@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const BASE = process.env.REACT_APP_API_URL || 'https://naya-backend-8afj.onrender.com';
 
 const API = axios.create({
   baseURL: BASE,
