@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mern-backend
+    env: node
+    rootDir: backend
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://meow:1234meow@cluster0.wdjkv9h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - key: FRONTEND_URL
+        value: https://naya-frontend.onrender.com
+  - type: web
+    name: mern-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "build"
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://naya-backend-8afj.onrender.com
