@@ -15,7 +15,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/recipes', recipesRoutes);
 app.use('/api/users', usersRoutes);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
